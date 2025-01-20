@@ -1,6 +1,6 @@
-class Student {
+class Students {
     // Static variable shared across all students
-    static String universityName = "Global University";
+    static String universityName = "IIT BOMBAY";
     private static int totalStudents = 0; // Tracks the total number of students
 
     // Final variable for a unique roll number
@@ -8,8 +8,8 @@ class Student {
     private String name;
     private String grade;
 
-    // Constructor to initialize student details using 'this' keyword
-    public Student(String name, int rollNumber, String grade) {
+    // Constructor to initialize student details using 'this' keyword 
+Students(String name, int rollNumber, String grade) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.grade = grade;
@@ -23,7 +23,7 @@ class Student {
 
     // Display student details, checking if the object is an instance of Student
     void displayDetails() {
-        if (this instanceof Student) {
+        if (this instanceof Students) {
             System.out.println("Name: " + name);
             System.out.println("Roll Number: " + rollNumber);
             System.out.println("Grade: " + grade);
@@ -31,15 +31,15 @@ class Student {
     }
 }
 
-public class Main {
+public class Student {
     public static void main(String[] args) {
         // Creating Student objects
-        Student student1 = new Student("Alice", 101, "A");
-        Student student2 = new Student("Bob", 102, "B");
+        Students student1 = new Students("DEEPAK", 101, "A");
+        Students student2 = new Students("CHOURSIYA", 102, "B");
 
         // Display student details and total students
         student1.displayDetails();
         student2.displayDetails();
-        Student.displayTotalStudents();
+        Students.displayTotalStudents();
     }
 }

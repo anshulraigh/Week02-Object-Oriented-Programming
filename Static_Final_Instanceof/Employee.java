@@ -1,4 +1,4 @@
-class Employee {
+class Employees {
     // Static variable shared by all employees
     static String companyName = "TechCorp"; 
     private static int totalEmployees = 0; // Tracks the total number of employees
@@ -9,7 +9,7 @@ class Employee {
     private String designation;
 
     // Constructor to initialize employee details using 'this' keyword
-    public Employee(String name, int id, String designation) {
+      Employees(String name, int id, String designation) {
         this.name = name;
         this.id = id;
         this.designation = designation;
@@ -23,7 +23,7 @@ class Employee {
 
     // Display employee details, checking if the object is an instance of Employee
     void displayDetails() {
-        if (this instanceof Employee) {
+        if (this instanceof Employees) {
             System.out.println("Name: " + name);
             System.out.println("ID: " + id);
             System.out.println("Designation: " + designation);
@@ -31,15 +31,15 @@ class Employee {
     }
 }
 
-public class Main {
+public class  Employee {
     public static void main(String[] args) {
         // Creating Employee objects
-        Employee emp1 = new Employee("John", 1, "Manager");
-        Employee emp2 = new Employee("Doe", 2, "Developer");
+        Employees emp1 = new Employees("John", 1, "Manager");
+        Employees emp2 = new Employees("Doe", 2, "Developer");
 
         // Displaying employee details and total employees
         emp1.displayDetails();
         emp2.displayDetails();
-        Employee.displayTotalEmployees();
+        Employees.displayTotalEmployees();
     }
 }

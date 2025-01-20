@@ -1,4 +1,4 @@
-class Product {
+class Products {
     // Static variable for a shared discount value
     static double discount = 10.0; // Discount in percentage
 
@@ -9,7 +9,7 @@ class Product {
     private int quantity;
 
     // Constructor to initialize product details using 'this' keyword
-    public Product(int productID, String productName, double price, int quantity) {
+  Products(int productID, String productName, double price, int quantity) {
         this.productID = productID;
         this.productName = productName;
         this.price = price;
@@ -23,7 +23,7 @@ class Product {
 
     // Display product details, checking if the object is an instance of Product
     void displayDetails() {
-        if (this instanceof Product) {
+        if (this instanceof Products) {
             System.out.println("Product ID: " + productID);
             System.out.println("Product Name: " + productName);
             System.out.println("Price: " + price);
@@ -33,18 +33,18 @@ class Product {
     }
 }
 
-public class Main {
+public class  Product {
     public static void main(String[] args) {
         // Creating Product objects
-        Product prod1 = new Product(1, "Laptop", 50000, 2);
-        Product prod2 = new Product(2, "Phone", 20000, 1);
+        Products prod1 = new Products(1, "Laptop", 50000, 2);
+        Products prod2 = new Products(2, "Phone", 20000, 1);
 
         // Display product details
         prod1.displayDetails();
         prod2.displayDetails();
 
         // Update and display the new discount
-        Product.updateDiscount(15.0);
-        System.out.println("Updated Discount: " + Product.discount + "%");
+        Products.updateDiscount(15.0);
+        System.out.println("Updated Discount: " + Products.discount + "%");
     }
 }

@@ -1,4 +1,4 @@
-class Vehicle {
+class Vehicles {
     // Static variable shared across all vehicles for registration fee
     static double registrationFee = 1500.0;
 
@@ -8,7 +8,7 @@ class Vehicle {
     private String vehicleType;
 
     // Constructor to initialize vehicle details using 'this' keyword
-    public Vehicle(String ownerName, String vehicleType, String registrationNumber) {
+      Vehicles(String ownerName, String vehicleType, String registrationNumber) {
         this.ownerName = ownerName;
         this.vehicleType = vehicleType;
         this.registrationNumber = registrationNumber;
@@ -21,7 +21,7 @@ class Vehicle {
 
     // Display vehicle details, checking if the object is an instance of Vehicle
     void displayDetails() {
-        if (this instanceof Vehicle) {
+        if (this instanceof Vehicles) {
             System.out.println("Owner Name: " + ownerName);
             System.out.println("Vehicle Type: " + vehicleType);
             System.out.println("Registration Number: " + registrationNumber);
@@ -30,18 +30,18 @@ class Vehicle {
     }
 }
 
-public class Main {
+public class Vehicle{
     public static void main(String[] args) {
         // Creating Vehicle objects
-        Vehicle vehicle1 = new Vehicle("John", "Car", "AB123");
-        Vehicle vehicle2 = new Vehicle("Jane", "Bike", "CD456");
+        Vehicles vehicle1 = new Vehicles("John", "Car", "AB123");
+        Vehicles vehicle2 = new Vehicles("Jane", "Bike", "CD456");
 
         // Display vehicle details
         vehicle1.displayDetails();
         vehicle2.displayDetails();
 
         // Update and display the new registration fee
-        Vehicle.updateRegistrationFee(2000.0);
-        System.out.println("Updated Registration Fee: " + Vehicle.registrationFee);
+        Vehicles.updateRegistrationFee(2000.0);
+        System.out.println("Updated Registration Fee: " + Vehicles.registrationFee);
     }
 }

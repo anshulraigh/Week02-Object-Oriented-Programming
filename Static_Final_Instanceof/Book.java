@@ -1,6 +1,6 @@
-class Book {
+class Books {
     // Static variable shared by all books
-    static String libraryName = "City Library";
+    static String libraryName = "DKC Library";
 
     // Final variable for a unique book identifier
     private final String isbn;
@@ -8,7 +8,7 @@ class Book {
     private String author;
 
     // Constructor to initialize book details using 'this' keyword
-    public Book(String title, String author, String isbn) {
+     Books(String title, String author, String isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
@@ -21,7 +21,7 @@ class Book {
 
     // Display book details, checking if the object is an instance of Book
     void displayDetails() {
-        if (this instanceof Book) {
+        if (this instanceof Books) {
             System.out.println("Title: " + title);
             System.out.println("Author: " + author);
             System.out.println("ISBN: " + isbn);
@@ -29,14 +29,14 @@ class Book {
     }
 }
 
-public class Main {
+public class Book {
     public static void main(String[] args) {
         // Creating Book objects
-        Book book1 = new Book("1984", "George Orwell", "12345");
-        Book book2 = new Book("Brave New World", "Aldous Huxley", "67890");
+        Books book1 = new Books("1984", "George Orwell", "12345");
+        Books book2 = new Books("Brave New World", "Aldous Huxley", "67890");
 
         // Display library name and book details
-        Book.displayLibraryName();
+        Books.displayLibraryName();
         book1.displayDetails();
         book2.displayDetails();
     }
